@@ -32,7 +32,6 @@ fn ddt_calculate(sbox: &[usize; 8]){
 
                 counts[dly] += 1;
                 
-
             }
             print!("  ");
 
@@ -41,7 +40,6 @@ fn ddt_calculate(sbox: &[usize; 8]){
                 let zoya = counts[i] as f64 / sbox.len() as f64;
 
                 print!(" {:>4} ", zoya)
-
             }
             print!("   ");
     println!(" counter {:?}", counts);

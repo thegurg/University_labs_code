@@ -20,12 +20,11 @@
 package main
 import "fmt"
 
-func main(){
-	sbox := [8]int{2,0,6,5,1,7,3,4}
+func ddt_calc(sbox []int){
 
 	for dlx:=0; dlx < len(sbox) ; dlx++ {
 
-		counts := [8]int{0,0,0,0,0,0,0,0}
+		counts := []int{0,0,0,0,0,0,0,0}
 
 		for x:=0 ; x < len(sbox); x++ {
 
@@ -46,4 +45,14 @@ func main(){
 		fmt.Print("counts " ,counts)
 		fmt.Println("")
 	}
+}
+
+func main(){
+	var sbox1 = []int{2,0,6,5,1,7,3,4}
+    var sbox2 = []int{5,4,7,0,6,3,1,2}
+
+	ddt_calc(sbox1)
+	fmt.Println("----------------------")
+	ddt_calc(sbox2)
+
 }
