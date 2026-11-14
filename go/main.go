@@ -22,11 +22,10 @@ import "fmt"
 
 func main(){
 	sbox := [8]int{2,0,6,5,1,7,3,4}
-	//counts := [8]int{0,1,2,3,4,5,6,7}
 
 	for dlx:=0; dlx < len(sbox) ; dlx++ {
 
-		counts := [8]int{0,1,2,3,4,5,6,7}
+		counts := [8]int{0,0,0,0,0,0,0,0}
 
 		for x:=0 ; x < len(sbox); x++ {
 
@@ -39,11 +38,12 @@ func main(){
 		}
 		fmt.Print("   ")
 		for i := 0; i < len(counts); i++ {
-			zoya := counts[i] / len(sbox)
+			zoya := float32(counts[i]) / float32(len(sbox))
 
-			fmt.Print(zoya)
+			fmt.Print(" ",zoya," ")
 		}
-
+		fmt.Print("  ")
+		fmt.Print("counts " ,counts)
 		fmt.Println("")
 	}
 }
