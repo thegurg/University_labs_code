@@ -19,7 +19,7 @@
 
 
 fn ddt_calculate(sbox: &[usize; 8]){
-
+    println!("dlx/dly");
     for dlx in 0..sbox.len() {
 
         let mut counts = [0; 8];
@@ -28,18 +28,19 @@ fn ddt_calculate(sbox: &[usize; 8]){
 
                 let dly = sbox[x] ^ sbox[x ^ dlx];
 
-                print!("{} ", dly);
+                print!("{:>4}", dly);
 
                 counts[dly] += 1;
                 
 
             }
             print!("  ");
+
             for i in 0..sbox.len(){
 
-            let zoya = counts[i] as f64 / sbox.len() as f64;
+                let zoya = counts[i] as f64 / sbox.len() as f64;
 
-            print!(" {} ", zoya)
+                print!(" {:>4} ", zoya)
 
             }
             print!("   ");
