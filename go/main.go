@@ -1,22 +1,3 @@
-// x ^ dlx
-// dly = sx ^ s(x ^ dlx)
-
-
-// package main
-// import "fmt"
-
-// func main()  {
-// 	var x = 5
-// 	var dlx = 3
-// 	sbox := [8]int{2,0,6,5,1,7,3,4}
-
-// 	var dlx_x = x ^ dlx
-// 	var dly = sbox[x] ^ sbox[dlx_x]
-
-
-// 	fmt.Println(dly)
-// }
-
 package main
 import "fmt"
 
